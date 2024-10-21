@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="/css/perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="icon-container">
+            <a href="#productos" class="icon">
+                <img src="/imagenes_2/inventario.png" alt="Inventario">
+            </a>
+        </div>
+        <div class="icon-container">
+            <a href="#usuarios" class="icon">
+                <img src="/imagenes_2/perfil.png" alt="Usuarios">
+            </a>
+        </div>
+        <div class="icon-container">
+            <a href="#reportes" class="icon">
+                <img src="/imagenes_2/nueva_factura.png" alt="Reportes">
+            </a>
+        </div>
+        <div class="icon-container">
+            <a href="#configuracion-productos" class="icon">
+                <img src="/imagenes_2/confi_producto.png" alt="Configuración Productos">
+            </a>
+        </div>
+        <div class="icon-container">
+            <a href="#cuentas" class="icon">
+                <img src="/imagenes_2/contabilidad.png" alt="Configuración General">
+            </a>
+        </div>
+        <div class="icon-container salir">
+            <a href="#cerrar-sesion" class="icon">
+                <img src="/imagenes_2/salir.png" alt="Cerrar Sesión">
+            </a>
+        </div>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="content">
+        <div class="profile-container">
+            <h1>Perfil</h1>
+            <div class="profile-image">
+                <img src="https://placehold.co/150x150" alt="User profile picture">
+                <span class="camera-icon"><i class="fas fa-camera"></i></span>
+            </div>
+            <div class="profile-details">
+                <div>
+                    <i class="fas fa-user"></i>
+                    <span id="nameDisplay">Nombre: Camila Rodriguez</span>
+                    <i class="fas fa-pen edit-icon" data-field="name"></i>
+                </div>
+                <div>
+                    <i class="fas fa-id-card"></i>
+                    <span id="idDisplay">Identificación: 1109867123</span>
+                    <i class="fas fa-pen edit-icon" data-field="id"></i>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span id="emailDisplay">Correo: sanchezcamil0567@gmail.com</span>
+                    <i class="fas fa-pen edit-icon" data-field="email"></i>
+                </div>
+                <div>
+                    <i class="fas fa-lock"></i>
+                    <span id="passwordDisplay">Contraseña: *****</span>
+                    <i class="fas fa-pen edit-icon" data-field="password"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Field</h2>
+            <input type="text" id="editInput" placeholder="Enter new value">
+            <button id="saveButton">Save</button>
+        </div>
+    </div>
+
+    <script src="/js/perfil.js"></script>
+</body>
+</html>
