@@ -1,0 +1,506 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family:Arial, sans-serif;
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    height: 100vh; /* Altura completa */
+    width: 80px;   /* Ancho fijo */
+    background-color: #d0b6cc; /* Color*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.icon-container {
+    margin-bottom: 30px; /* Espacio entre los iconos */
+}
+
+/* El ícono de salir (último ícono) */
+.salir {
+    margin-top: auto; /* Empuja este ícono al fondo */
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.icon a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-container:hover {
+    background-color: #b895c4;
+    border-radius: 10px;
+    
+}
+
+/* Estilo para el contenido principal */
+.content {
+    margin-left: 80px; /* Desplaza el contenido para que no esté debajo de la barra lateral */
+    padding: 20px;
+    background-color: #f5e4f7;
+    min-height: 100vh;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .content {
+        margin-left: 70px;
+    }
+}
+
+
+/*la de registro*/
+.main-content {
+    flex-grow:41;
+    padding: 80px;
+}
+/*es para los bordes del registro */
+.form-container {
+    padding: 20px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* el espacio entre el titulo regitro y los registrso*/
+.form-container h2 {
+    margin-bottom: 20px;
+}
+/*es lo de registro*/
+form input {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;/* son los bordes*/
+    margin-bottom: 10px;
+}
+/* el botton de buscar*/
+.guardar-btn {
+    background-color: #cd88eb !important; /* Color de fondo morado */
+    color: rgb(8, 8, 8) !important; /* Texto en color blanco */
+    border: none !important; /* Sin borde */
+    padding: 10px 15px !important; /* Espaciado interno del botón */
+    border-radius: 10px !important; /* Bordes semi redondos */
+    cursor: pointer !important; /* Muestra un puntero de mano */
+    font-size: 16px !important; /* Tamaño de fuente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Sombra para dar profundidad */
+    transition: background-color 0.3s ease !important; /* Animación suave para hover */
+}
+
+/* Efecto hover para cambiar el color al pasar el cursor */
+.guardar-btn:hover {
+    background-color: #975bb1 !important; /* Color morado más oscuro en hover */
+}
+
+
+/* para que quede centrado el de bucar */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #e6e8e9; /* Color gris claro de fondo */
+    border-radius: 15px;
+    padding: 0px;
+    width: 400px; /* Aumenta el ancho según necesites */
+}
+
+.search-container input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    flex: 1;
+    padding: 8px 12px; /* Ajusta el padding para más espacio */
+    color: #808080; /* Color gris para el texto */
+    font-size: 16px;
+}
+
+.search-container button {
+    background-color: #d3aefc;/* Color lila para el botón */
+    border: none;
+    border-radius: 10px; /* Ajusta el radio de borde para igualar el estilo */
+    padding: 10px;
+    margin-left: 10px; /* Añade un margen para separarlo del input */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container button img {
+    width: 20px; /* Ajusta el tamaño del icono */
+    height: 20px;
+    filter: grayscale(100%);
+}
+
+.search-container button img {
+    width: 24px; /* Ajusta el ancho del icono de la lupa */
+    height: 24px; /* Ajusta la altura del icono de la lupa */
+    filter: grayscale(100%);
+}
+/*taabla*/
+
+/* Tabla redondeada */
+
+
+
+
+/* Alternar colores en las filas */
+
+
+
+
+
+
+
+
+/* Contenedor de la tabla con bordes redondeados */
+/* Contenedor de la tabla */
+.table-container {
+    overflow: hidden; /* Permite el borde redondeado */
+    border-radius: 15px; /* Borde redondeado en todos los lados */
+     /* Borde general para visualizar mejor */
+    padding: 0; /* Asegura que no haya espacio adicional */
+}
+
+/* Estilos para la tabla */
+
+
+thead tr, tbody tr {
+    display: table; /* Mantiene las filas dentro del contenedor */
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+
+/*/*
+
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: separate; /* Para mantener separación entre celdas */
+    border-spacing: 0; /* Elimina espacio entre las celdas */
+}
+
+/* Cabeceras de la tablaffff */
+thead {
+    background-color: #e6e8e9;
+}
+
+/* Celdas de la tabla (th y td) */
+table, th, td {
+    border: 1px solid #ccc; /* Borde para cada celda */
+    text-align: center;
+    padding: 12px;
+}
+
+/* Redondear las esquinas superiores */
+thead th:first-child {
+    border-top-left-radius: 15px; /* Esquina superior izquierda */
+}
+
+thead th:last-child {
+    border-top-right-radius: 15px; /* Esquina superior derecha */
+}
+
+/* Redondear las esquinas inferiores */
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 15px; /* Esquina inferior izquierda */
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px; /* Esquina inferior derecha */
+}
+
+/* Botones de editar y eliminar en la misma celda */
+td button {
+    margin: 0 5px; /* Espaciado entre los botones */
+}
+
+/* Alternar colores en las filas del cuerpo */
+tbody tr:nth-child(odd) {
+    background-color: rgb(255, 255, 210); /* Color amarillo claro para filas impares */
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(230, 230, 230); /* Color gris claro para filas pares */
+}
+
+.edit-btn, .delete-btn {
+    display: inline-block;
+    margin: 0 5px; /* Espacio entre los botones */
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.edit-btn img, .delete-btn img {
+    width: 20px;
+    height: 20px; /* Ajusta el tamaño de los iconos si es necesario */
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse; /* Evitar las líneas de separación entre celdas */
+}
+
+
+
+
+
+.search-box {
+    position: relative;
+    width: 400px; /* Ajusta el tamaño del cuadro de búsqueda */
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 60px; /* Espacio para el botón con la lupa */
+    border: 1px solid #e6e8e9;
+    border-radius: 25px 0 0 25px; /* Borde redondeado solo en la parte izquierda */
+    background-color:#e6e8e9(230, 230, 230); /* Color gris claro para las filas pares */
+    background-color: #e6e8e9; /* Color de fondo gris claro */
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: #888;
+}
+
+
+
+
+/*pantalla emergente */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0e4f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de la tabla */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Estilos del modal  de primera pantalla */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    
+    color: rgb(34, 33, 33);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #dcb1ee;
+    
+}
+
+/* Estilos del modal de eliminación */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+button.ok-btn {
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.ok-btn:hover {
+    background-color: #8e44ad;
+}
+
+button.cancel-btn {
+    background-color: gray;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cancel-btn:hover {
+    background-color: darkgray;
+}
+
+
+/* Estilos del modal de edición  de producto*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Estilos para los botones de Guardar y Cancelar */
+.guardar-btn, .cancelar-btn {
+    background-color: #bb98c9; /* Color de fondo morado */
+    color: rgb(26, 25, 25); /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cambiar color al pasar el cursor por encima */
+.guardar-btn:hover, .cancelar-btn:hover {
+    background-color: #8e44ad; /* Color más oscuro al hacer hover */
+}
+
+
+/* styles.css */
+.icon-container {
+    position: relative; /* Permite la posición absoluta del texto */
+    display: inline-block; /* Ajusta el tamaño del contenedor al contenido */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+    
+}
+
+.icon-label {
+    position: absolute; /* Posiciona el texto de forma absoluta respecto al contenedor */
+    top: 50%; /* Centra verticalmente el texto con respecto al ícono */
+    left: 110%; /* Coloca el texto a la derecha del ícono */
+    transform: translateY(-50%); /* Compensa el desplazamiento para centrar verticalmente */
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    color: #f0dada; /* Cambia el color del texto */
+    font-family: Arial, sans-serif;
+    background-color: rgba(15, 15, 15, 0.918); /* Fondo semitransparente para mejorar la visibilidad */
+    padding: 6px; /* Espaciado alrededor del texto */
+    border-radius: 15px; /* Bordes redondeados */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    z-index: 1000; /* Asegura que el texto esté por encima de otros elementos */
+    display: none; /* Inicialmente oculto */
+}
+
+.icon-container:hover .icon-label {
+    display: block; /* Muestra el texto cuando el mouse está sobre el contenedor */
+}
+
+
+
+
+
+

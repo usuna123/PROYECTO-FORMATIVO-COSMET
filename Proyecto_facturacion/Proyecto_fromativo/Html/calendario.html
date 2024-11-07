@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Factura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/calendario.css">
+</head>
+<body class="flex">
+    <!-- Sidebar con imágenes como íconos -->
+    <div class="sidebar flex flex-col items-center py-4">
+        <!-- Iconos importados con imágenes -->
+        <img src="icon1.png" alt="Icono 1" class="icon mb-6">
+        <img src="icon2.png" alt="Icono 2" class="icon mb-6">
+        <img src="icon3.png" alt="Icono 3" class="icon mb-6">
+        <img src="icon4.png" alt="Icono 4" class="icon mb-6">
+        <img src="icon5.png" alt="Icono 5" class="icon mb-6">
+
+        <!-- Icono de apagado al final -->
+        <img src="icon6.png" alt="Apagar" class="icon mt-auto">
+    </div>
+
+    <!-- Main content -->
+    <div class="flex-1 p-10">
+        <div class="bg-gray-200 p-6 rounded-lg shadow-md">
+            <h1 class="text-lg font-bold mb-4">Reporte Factura</h1>
+
+            <!-- Date and Search -->
+            <div class="flex items-center mb-6">
+                <label for="fecha" class="mr-4">Fecha</label>
+                <input type="date" id="fecha" class="border border-gray-400 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="ml-4 bg-purple-500 text-white px-4 py-2 rounded">Buscar</button>
+            </div>
+
+            
+
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="/Js/calendario.js"></script>
+</body>
+</html>

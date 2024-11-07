@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7e8f8;
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    height: 100vh; /* Altura completa */
+    width: 80px;   /* Ancho fijo */
+    background-color: #d0b6cc; /* Color*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.icon-container {
+    margin-bottom: 30px; /* Espacio entre los iconos */
+}
+
+/* El ícono de salir (último ícono) */
+.salir {
+    margin-top: auto; /* Empuja este ícono al fondo */
+}
+
+.icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.icon a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-container:hover {
+    background-color: #b895c4;
+    border-radius: 10px;
+    
+}
+
+/* Estilo para el contenido principal */
+.content {
+    margin-left: 80px; /* Desplaza el contenido para que no esté debajo de la barra lateral */
+    padding: 20px;
+    background-color: #f5e4f7;
+    min-height: 100vh;
+}
+
+
+
+
+/* Contenido principal */
+
+
+/* Estilos para la tabla */
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-btn img, .delete-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Factura */
+.invoice {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #b68cd8;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .content {
+        margin-left: 70px;
+    }
+}

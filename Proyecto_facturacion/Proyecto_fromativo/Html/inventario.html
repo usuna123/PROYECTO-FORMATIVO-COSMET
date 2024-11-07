@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra Lateral con Iconos</title>
+    <!-- Enlace al archivo CSS para los estilos -->
+    <link rel="stylesheet" href="/Css/inventario.css">
+</head>
+<body>
+    <!-- Barra lateral con íconos -->
+    <div class="sidebar">
+        <!-- Contenedor de cada ícono -->
+        <div class="icon-container">
+            <!-- Ícono de perfil -->
+            <a href="#usuarios" class="icon">
+                <img src="/imagenes_2/inventario.png" alt="Usuarios">
+                <samp class="icon-label">Perfil</samp> <!-- Probablemente debería ser <span>, <samp> es para output de código -->
+            </a>
+        </div>
+        <!-- Ícono de usuario -->
+        <div class="icon-container">
+            <a href="#usuarios" class="icon">
+                <img src="/imagenes_2/perfil.png" alt="Usuarios">
+                <samp class="icon-label">Usuario</samp>
+            </a>
+        </div>
+        <!-- Ícono para nueva factura -->
+        <div class="icon-container">
+            <a href="#reportes" class="icon">
+                <img src="/imagenes_2/nueva_factura.png" alt="Reportes">
+                <samp class="icon-label">nueva Factura</samp>
+            </a>
+        </div>
+        <!-- Ícono de configuración -->
+        <div class="icon-container">
+            <a href="#configuracion-productos" class="icon">
+                <img src="/imagenes_2/confi_producto.png" alt="Configuración Productos">
+                <samp class="icon-label">Configuracion</samp> <!-- Revisa la ortografía, falta tilde: "Configuración" -->
+            </a>
+        </div>
+        <!-- Ícono de cuentas -->
+        <div class="icon-container">
+            <a href="#cuentas" class="icon">
+                <img src="/imagenes_2/contabilidad.png" alt="Cuentas">
+                <span class="icon-label">Cuentas</span> <!-- Aquí se usa correctamente <span> -->
+            </a>
+        </div>
+        <!-- Ícono para cerrar sesión -->
+        <div class="icon-container salir">
+            <a href="#cerrar-sesion" class="icon">
+                <img src="/imagenes_2/salir.png" alt="Cerrar Sesión">
+                <samp class="icon-label">Salir</samp> <!-- Probablemente debería ser <span> -->
+            </a>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <!-- Formulario para registrar productos -->
+        <div class="form-container">
+            <h2>Registrar Productos</h2>
+            <form>
+                <input type="text" placeholder="Código" name="codigo">
+                <input type="text" placeholder="Descripción" name="descripcion">
+                <input type="text" placeholder="Precio" name="precio">
+                <input type="number" placeholder="Existencias" name="existencias">
+                <input type="text" placeholder="IVA" name="iva">
+                <button class="guardar-btn" type="submit">Guardar</button>
+            </form>
+        </div>
+
+        <!-- Buscador de productos -->
+        <div class="search-container">
+            <input type="text" placeholder="Buscar producto">
+            <button type="submit">
+                <img src="/imagenes_2/lupa.png" alt="Buscar" />
+            </button>
+        </div>
+        
+        
+        <!-- Tabla de productos -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Existencia</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2345</td>
+                        <td>Labial</td>
+                        <td>12.000</td>
+                        <td>20</td>
+                        <td>
+                            <!-- Botón para editar producto -->
+                            <button class="edit-btn" onclick="openPasswordModal(this.parentElement.parentElement)">
+                                <img src="/imagenes_2/editar lapizz.png" alt="Editar"> <!-- Revisa el nombre de la imagen, podría ser un error de typo -->
+                            </button>
+                            <!-- Botón para eliminar producto -->
+                            <button class="delete-btn" onclick="openDeleteModal(this.parentElement.parentElement)">
+                                <img src="/imagenes_2/eliminar.png" alt="Eliminar">
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3145</td>
+                        <td>Polvos</td>
+                        <td>15.000</td>
+                        <td>30</td>
+                        <td>
+                            <!-- Botón para editar producto -->
+                            <button class="edit-btn" onclick="openPasswordModal(this.parentElement.parentElement)">
+                                <img src="/imagenes_2/editar lapizz.png" alt="Editar"> <!-- Revisa el nombre de la imagen, podría ser un error de typo -->
+                            </button>
+                            <!-- Botón para eliminar producto -->
+                            <button class="delete-btn" onclick="openDeleteModal(this.parentElement.parentElement)">
+                                <img src="/imagenes_2/eliminar.png" alt="Eliminar">
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2341</td>
+                        <td>Pestañina</td>
+                        <td>10.000</td>
+                        <td>10</td>
+                        <td>
+                            <!-- Botón para editar producto -->
+                            <button class="edit-btn" onclick="openPasswordModal(this.parentElement.parentElement)">
+                                <img src="/imagenes_2/editar lapizz.png" alt="Editar"> <!-- Revisa el nombre de la imagen, podría ser un error de typo -->
+                            </button>
+                            <!-- Botón para eliminar producto -->
+                            <button class="delete-btn" onclick="openDeleteModal(this.parentElement.parentElement)">
+                                <img src="/imagenes_2/eliminar.png" alt="Eliminar">
+                            </button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal para autenticación -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2>Autenticación requerida</h2>
+                <p>Por favor, ingresa tu contraseña para editar o eliminar el producto seleccionado.</p>
+                <input type="password" id="password" placeholder="Contraseña">
+                <button onclick="confirmPassword()">Confirmar</button>
+            </div>
+        </div>
+
+        <!-- Modal para editar producto -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeEditModal()">&times;</span>
+                <h2>Editar producto</h2>
+                <form id="editForm">
+                    <input type="text" id="editCodigo" placeholder="Código">
+                    <input type="text" id="editDescripcion" placeholder="Descripción">
+                    <input type="text" id="editPrecio" placeholder="Precio">
+                    <input type="number" id="editExistencias" placeholder="Existencias">
+                    <input type="text" id="editIva" placeholder="IVA">
+                    <!-- Botones de Guardar y Cancelar en el Modal -->
+                    <button class="guardar-btn" onclick="saveChanges()">Guardar Cambios</button>
+                    <button class="cancelar-btn" onclick="closeEditModal()">Cancelar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal para eliminación -->
+        <div id="deleteModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeDeleteModal()">&times;</span>
+                <h2>¿Deseas eliminar el registro?</h2>
+                <button onclick="deleteRow()" class="ok-btn">Ok</button>
+                <button onclick="closeDeleteModal()" class="cancel-btn">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Archivo JS que controla las funciones de los modales -->
+    <script src="/Js/pant1.js"></script>
+</body>
+</html>

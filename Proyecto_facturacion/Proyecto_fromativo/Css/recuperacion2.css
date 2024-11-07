@@ -1,0 +1,89 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('fondo.jpg'); /* Reemplaza 'fondo.jpg' con tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Caja del mensaje de éxito */
+.success-box {
+    background-color: rgba(255, 228, 225, 0.9); /* Fondo semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del logo */
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los párrafos */
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Estilo del texto en negrita */
+strong {
+    color: #333;
+}
+
+/* Estilo del botón */
+.btn {
+    display: inline-block;
+    background-color: #f8b5ad;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.btn:hover {
+    background-color: #e09788;
+}
+
+/* Adaptabilidad de la página para pantallas pequeñas */
+@media (max-width: 480px) {
+    .success-box {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
